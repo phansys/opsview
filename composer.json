@@ -12,10 +12,9 @@
     }
   ],
   "require":     {
-    "php":              ">=5.4.0",
-    "rmccue/requests":  "*",
-    "packaged/helpers": "*",
-    "packaged/config":  "*"
+    "php":             ">=5.4.0",
+    "rmccue/requests": "*",
+    "packaged/config": "*"
 
   },
   "autoload":    {

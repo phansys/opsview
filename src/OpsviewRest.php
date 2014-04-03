@@ -40,13 +40,18 @@ class OpsviewRest
       'accept'             => 'application/json'
     ];
 
+    if(substr($url, -1, 1) !== '/')
+    {
+      $url = $url . '/';
+    }
+
     if($params === null)
     {
-      $request = \Requests::get(build_path($url, $path), $headers);
+      $request = \Requests::get($url . $path, $headers);
     }
     else
     {
-      $request = \Requests::post(build_path($url, $path), $headers, $params);
+      $request = \Requests::post($url . $path, $headers, $params);
     }
     return json_decode($request->body);
   }
